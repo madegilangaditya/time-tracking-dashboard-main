@@ -49,6 +49,12 @@ p{
         padding: 30px;
         border-radius: 15px;
         background-color: $dark-blue;
+
+        &-title{
+            h6{
+                color: $pale-blue;
+            }
+        }
     }
 
     &.work{
