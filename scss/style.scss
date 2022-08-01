@@ -30,7 +30,12 @@ body{
 h1{
     color: $pale-blue;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rm;
+}
+
+h6{
+    font-size: 1.125rem;
+    color: #fff;
 }
 
 p{
@@ -50,19 +55,35 @@ p{
         border-radius: 15px;
         background-color: $dark-blue;
 
-        &-title{
-            h6{
-                color: $pale-blue;
+        &-title,
+        &-time{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-time{
+
+            .time-title{
+                font-size: 1.875rem;
+                font-weight: 300;
+                color: #fff;
             }
         }
     }
 
-    &.work{
+    &.work,
+    &.play{
         background-color: $work-bg;
         background-image: url('../images/icon-work.svg');
         background-repeat: no-repeat;
-        background-position: top right;
+        background-position: calc(100% - 30px ) 0px;
         padding-top: 38px;
+    }
+
+    &.play{
+        background-image: url('../images/icon-play.svg');
+        background-color: $play-bg;
     }
 
 }
