@@ -30,7 +30,7 @@ body{
 h1{
     color: $pale-blue;
     font-weight: 400;
-    font-size: 1.5rm;
+    font-size: 1.5rem;
 }
 
 h6{
@@ -73,7 +73,11 @@ p{
     }
 
     &.work,
-    &.play{
+    &.play,
+    &.study,
+    &.exercise,
+    &.social,
+    &.self-care{
         background-color: $work-bg;
         background-image: url('../images/icon-work.svg');
         background-repeat: no-repeat;
@@ -84,6 +88,26 @@ p{
     &.play{
         background-image: url('../images/icon-play.svg');
         background-color: $play-bg;
+    }
+
+    &.study{
+        background-image: url('../images/icon-study.svg');
+        background-color: $study-bg;
+    }
+
+    &.exercise{
+        background-image: url('../images/icon-exercise.svg');
+        background-color: $exercise-bg;
+    }
+
+    &.social{
+        background-image: url('../images/icon-social.svg');
+        background-color: $social-bg;
+    }
+
+    &.self-care{
+        background-image: url('../images/icon-self-care.svg');
+        background-color: $self-care-bg;
     }
 
 }
