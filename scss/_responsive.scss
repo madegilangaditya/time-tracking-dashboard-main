@@ -1,0 +1,49 @@
+@media all and (min-width:768px){
+    .container{
+        max-width: 938px;
+        margin: auto;
+    }
+
+    .col{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .card{
+        width: 30%;
+        margin-bottom: 0;
+
+        &-wrap{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+
+            &-time{
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+
+        &.profile{
+            flex: 0 0 24%;
+        }
+
+        .period{
+
+            ul{
+                flex-direction: column;
+                gap: 10px
+            }
+        }
+
+        &-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            flex: 0 0 73%;
+            justify-content: space-around;
+            gap: 25px;
+        }
+    }
+}
