@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/vanilla-js-sass-mobile-first-workflow-nqDBBHnupX](https://www.frontendmentor.io/solutions/vanilla-js-sass-mobile-first-workflow-nqDBBHnupX)
+- Live Site URL: [https://madegilangaditya.github.io/time-tracking-dashboard-main/](https://madegilangaditya.github.io/time-tracking-dashboard-main/)
 
 ## My process
 
@@ -43,6 +43,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.mdgilangaditya.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/madegilangaditya)
+- Website - [https://www.mdgilangaditya.com](https://www.mdgilangaditya.com)
+- Frontend Mentor - [@madegilangaditya](https://www.frontendmentor.io/profile/madegilangaditya)
 - Twitter - [@GilangAditya666](https://www.twitter.com/GilangAditya666)
