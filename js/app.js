@@ -1,7 +1,7 @@
 console.log('masuk');
 const cardList = document.querySelector('#card-list');
 let html = '';
-let url = '../data.json';
+let url = './../data.json';
 let type = 'Weekly';
 const periods = document.querySelectorAll('.period ul li'); 
 
