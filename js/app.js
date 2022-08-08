@@ -15,8 +15,7 @@ function menuClick(period){
         });
         period.children[0].classList.add('active');
         type = period.children[0].textContent;
-        console.log(type);
-        // getData(url, type);
+        getData(url, type);
     });
 }
 
@@ -26,32 +25,57 @@ function getData(url,type){
     ).then(
         (data) => (
             data.forEach(datas => {
-                console.log(datas);
-                
-                html += `
-                <div class="card ${datas.title.toLowerCase().replaceAll(' ', '-')}">
-                    <div class="card-wrap">
-                    <div class="card-wrap-title">
-                        <h6>${datas.title}</h6>
-                        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                if(type == 'Weekly'){
+                    html += `
+                    <div class="card ${datas.title.toLowerCase().replaceAll(' ', '-')}">
+                        <div class="card-wrap">
+                        <div class="card-wrap-title">
+                            <h6>${datas.title}</h6>
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                        </div>
+                        <div class="card-wrap-time">
+                            <p class="time-title">${datas.timeframes.weekly.current}hrs</p>
+                            <p class="last-week">Last Week - ${datas.timeframes.weekly.previous}hrs</p>
+                        </div>
+                        </div>
                     </div>
-                    <div class="card-wrap-time">
-                        <p class="time-title">${datas.timeframes.weekly.current}hrs</p>
-                        <p class="last-week">Last Week - ${datas.timeframes.weekly.previous}hrs</p>
+                    `;
+                }else if(type == 'Daily'){
+                    html += `
+                    <div class="card ${datas.title.toLowerCase().replaceAll(' ', '-')}">
+                        <div class="card-wrap">
+                        <div class="card-wrap-title">
+                            <h6>${datas.title}</h6>
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                        </div>
+                        <div class="card-wrap-time">
+                            <p class="time-title">${datas.timeframes.daily.current}hrs</p>
+                            <p class="last-week">Last Day - ${datas.timeframes.daily.previous}hrs</p>
+                        </div>
+                        </div>
                     </div>
+                    `;
+                }else{
+                    html += `
+                    <div class="card ${datas.title.toLowerCase().replaceAll(' ', '-')}">
+                        <div class="card-wrap">
+                        <div class="card-wrap-title">
+                            <h6>${datas.title}</h6>
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                        </div>
+                        <div class="card-wrap-time">
+                            <p class="time-title">${datas.timeframes.monthly.current}hrs</p>
+                            <p class="last-week">Last Month - ${datas.timeframes.monthly.previous}hrs</p>
+                        </div>
+                        </div>
                     </div>
-                </div>
-                `;
-                
-                
-                console.log(html);
+                    `;
+                }
                 cardList.innerHTML = html;
-                
             })
-            
         )
     );  
-
+    html ='';
 }
 
 function loadData(url){
@@ -60,7 +84,6 @@ function loadData(url){
     ).then(
         (data) => (
             data.forEach(datas => {
-                console.log(datas);
                 
                 html += `
                 <div class="card ${datas.title.toLowerCase().replaceAll(' ', '-')}">
@@ -76,9 +99,6 @@ function loadData(url){
                     </div>
                 </div>
                 `;
-                
-                
-                console.log(html);
                 cardList.innerHTML = html;
                 
             })
